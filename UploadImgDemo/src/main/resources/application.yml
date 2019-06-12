@@ -1,0 +1,20 @@
+
+spring:
+  freemarker:
+    request-context-attribute: req
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    cache: false
+    template-loader-path: classpath:/templates/
+    charset: UTF-8
+    settings:
+      number_format: '0.##'
+  servlet:
+    multipart:
+      resolve-lazily: false
+      max-file-size: 50MB
+      max-request-size: 50MB    #指定multipart/form-data请求允许的最大大小，切记MB大写不然会报错
+
+
+
